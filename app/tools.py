@@ -9,6 +9,8 @@ def file_age(file):
     return int((time.time() - os.stat(file).st_mtime)/60)
 
 def get_weather():
+    '''returns current conditions. '''
+    #TODO get future weather as well
     key = os.environ.get('WUNDERGROUND_KEY')
     if os.path.isfile("forecast.json") and not \
             file_age("forecast.json") > reload_time:

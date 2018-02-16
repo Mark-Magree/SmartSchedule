@@ -12,6 +12,7 @@ from config import todo_list
 from tools import time_until_event, get_weather
 
 def condition_met(event, now, w):
+    '''determine if event should be displayed'''
     if 'date' in event: 
         time_till = time_until_event(event, now)
         if time_till.days > 7:
@@ -34,6 +35,7 @@ def build_report():
                     w["current_observation"]["wind_mph"],
                     ))
 
+    #TODO import events from database instead of config
     if todo_list:
         report.append("    On your TODO list:")
         for event in todo_list:
