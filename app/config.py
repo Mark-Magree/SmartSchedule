@@ -8,5 +8,6 @@ todo_list = [
 
 state = environ.get('CURRENT_STATE')
 city = environ.get('CURRENT_CITY')
-#reload_time: minutes between refreshing weather cache
+
+#reload_time: minutes before refreshing weather cache
 reload_time = 10
